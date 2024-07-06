@@ -66,7 +66,7 @@ async def start_command(client: Client, message: Message):
             await update_verify_status(id, is_verified=True, verified_time=time.time())
             if verify_status["link"] == "":
                 reply_markup = None
-            await message.reply(f"Your token successfully verified and valid for: 24 Hour", reply_markup=reply_markup, protect_content=False, quote=True)
+            await message.reply(f"Your token successfully verified ✅ and valid for: 24 Hour ⌛️", reply_markup=reply_markup, protect_content=False, quote=True)
 
         elif len(message.text) > 7 and verify_status['is_verified']:
             try:
@@ -128,7 +128,7 @@ async def start_command(client: Client, message: Message):
                 except:
                     pass
 
-            SD = await message.reply_text("bro! Files will be deleted After 300 seconds. Save them to the Saved Message now!")
+            SD = await message.reply_text("🍿 Join Backup Channel :- @ROCKERSBACKUP\n\n🔞 Join Adult Channel :- t.me/+P-wgbt_2dlU3MTM1")
             await asyncio.sleep(300)
 
             for snt_msg in snt_msgs:
@@ -160,16 +160,16 @@ async def start_command(client: Client, message: Message):
         else:
             verify_status = await get_verify_status(id)
             if IS_VERIFY and not verify_status['is_verified']:
-                short_url = f"earn2short.in"
+                short_url = f"zipshort.net"
                 TUT_VID = f"https://t.me/How_to_open_link_rockersbot"
                 token = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
                 await update_verify_status(id, verify_token=token, link="")
                 link = await get_shortlink(SHORTLINK_URL, SHORTLINK_API,f'https://telegram.dog/{client.username}?start=verify_{token}')
                 btn = [
-                    [InlineKeyboardButton("𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞", url=link)],
-                    [InlineKeyboardButton('𝐇𝐨𝐰 𝐓𝐨 𝐨𝐩𝐞𝐧 𝐭𝐡𝐢𝐬 𝐥𝐢𝐧𝐤', url=TUT_VID)]
+                    [InlineKeyboardButton("📥 𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞 📥", url=link)],
+                    [InlineKeyboardButton('✅ 𝐇𝐨𝐰 𝐓𝐨 𝐨𝐩𝐞𝐧 𝐭𝐡𝐢𝐬 𝐥𝐢𝐧𝐤 ✅', url=TUT_VID)]
                 ]
-                await message.reply(f"𝐘𝐨𝐮𝐫 𝐀𝐝𝐬 𝐭𝐨𝐤𝐞𝐧 𝐢𝐬 𝐞𝐱𝐩𝐢𝐫𝐞𝐝, 𝐫𝐞𝐟𝐫𝐞𝐬𝐡 𝐲𝐨𝐮𝐫 𝐭𝐨𝐤𝐞𝐧 𝐚𝐧𝐝 𝐭𝐫𝐲 𝐚𝐠𝐚𝐢𝐧. \n\n𝐓𝐨𝐤𝐞𝐧 𝐓𝐢𝐦𝐞𝐨𝐮𝐭: {get_exp_time(VERIFY_EXPIRE)}\n\n𝐖𝐡𝐚𝐭 𝐢𝐬 𝐭𝐡𝐞 𝐭𝐨𝐤𝐞𝐧?\n\n𝐓𝐡𝐢𝐬 𝐢𝐬 𝐚𝐧 𝐚𝐝𝐬 𝐭𝐨𝐤𝐞𝐧. 𝐈𝐟 𝐲𝐨𝐮 𝐩𝐚𝐬𝐬 𝟏 𝐚𝐝, 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐟𝐨𝐫 𝟐𝟒 𝐇𝐨𝐮𝐫 𝐚𝐟𝐭𝐞𝐫 𝐩𝐚𝐬𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐚𝐝.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+                await message.reply(f"🫵 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐯𝐞𝐫𝐢𝐟𝐲 𝐨𝐧𝐞 𝐭𝐢𝐦𝐞 𝐭𝐡𝐞𝐧 𝐮 𝐜𝐚𝐧 𝐠𝐞𝐭 𝐚𝐥𝐥 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 𝐢𝐧 ⏰ 𝟐𝟒𝐡𝐨𝐮𝐫𝐬 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐀𝐝𝐬🎟\n\n👇 𝐂𝐥𝐢𝐜𝐤 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐕𝐞𝐫𝐢𝐟𝐲 👇", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
 
 
@@ -193,12 +193,12 @@ async def not_joined(client: Client, message: Message):
             InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink),
         ],
         [
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+WmawyRXIkhE4NjJl"),
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=f"https://t.me/+cKCrT5dpRzphYjBl"),
+            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+cKCrT5dpRzphYjBl"),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=f"https://t.me/+BYUGGzDMt5xlMzNl"),
         ],
         [
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+BYUGGzDMt5xlMzNl"),
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=f"https://t.me/+49NBkK-AN_1lOWM9"),
+            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Rockers_Movie_Requist_Group"),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=f"https://t.me/+ecm74853H2Q2YzVl"),
         ],
     ]
     try:
