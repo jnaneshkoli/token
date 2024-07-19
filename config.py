@@ -30,7 +30,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "earn2short.in")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "c6416b312ff7ab400fb36614e61add83d51a0464")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
-IS_VERIFY = os.environ.get("IS_VERIFY", "True")
+IS_VERIFY = os.environ.get("IS_VERIFY", "False")
 TUT_VID = os.environ.get("TUT_VID","https://t.me/How_to_open_link_rockersbot")
 
 #force sub channel id, if you want enable force sub
